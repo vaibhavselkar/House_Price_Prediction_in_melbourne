@@ -76,3 +76,29 @@ if predict_button:
 
     # Display the PyDeck chart using st.pydeck_chart
     st.pydeck_chart(deck)
+else:
+    st.subheader("Default Map of Melbourne")
+    
+    # Create a PyDeck scatterplot layer for the default map
+    default_map_scatterplot = pdk.Layer(
+        "ScatterplotLayer",
+        data=pd.DataFrame({"latitude": [latitude], "longitude": [longitude]}),
+        get_position="[longitude, latitude]",
+        get_radius=200,
+        get_fill_color=[0, 0, 255],  # Blue color
+        pickable=True,
+        auto_highlight=True
+    )
+
+    # Create a PyDeck map using the scatterplot layer
+    default_map_deck = pdk.Deck(
+        map_style="mapbox://styles/mapbox/light-v9",
+        initial_view_state=pdk.ViewState(latitude=latitude, longitude=longitude, zoom=12, pitch=50),
+        layers=[default_map_scatterplot],
+    )
+
+    # Display the PyDeck chart using st.pydeck_chart
+    st.pydeck_chart(default_map_deck)
+    
+    # Display the coordinates
+    st.write(f"Default Location Coordinates: Latitude {latitude}, Longitude {longitude}")
