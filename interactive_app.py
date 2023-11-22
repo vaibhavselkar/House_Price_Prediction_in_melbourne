@@ -77,7 +77,7 @@ if predict_button:
     # Display the PyDeck chart using st.pydeck_chart
     st.pydeck_chart(deck)
 else:
-    st.subheader("Default Map of Melbourne")
+    st.subheader("Map of Melbourne")
     
     # Create a PyDeck scatterplot layer for the default map
     default_map_scatterplot = pdk.Layer(
