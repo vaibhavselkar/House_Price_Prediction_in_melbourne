@@ -2,7 +2,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Ridge
 from sklearn.pipeline import make_pipeline
-from category_encoders import OneHotEncoder
 import streamlit as st
 import pydeck as pdk
 
@@ -37,7 +36,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # Create and train the model
 model = make_pipeline(
-    OneHotEncoder(use_cat_names=True),
     Ridge()
 )
 model.fit(X_train, y_train)
