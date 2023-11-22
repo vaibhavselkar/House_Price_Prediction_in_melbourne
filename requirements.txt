@@ -1,4 +1,4 @@
-scikit-learn
 pandas
-pydeck
+scikit-learn
 streamlit
+pydeck
