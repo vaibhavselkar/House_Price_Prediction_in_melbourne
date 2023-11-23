@@ -121,7 +121,7 @@ Welcome to the "Apartment Price Prediction In Melbourne" app! This user-friendly
 
 **4. Result Display**
 4.1 **Prediction:**
-   - After clicking "Predict," the app will display the predicted apartment price below the button.
+   - After clicking "Predict," the app will display the predicted apartment price.
 
 4.2 **Selected Location on Map:**
    - If the "Predict" button is clicked, a map will appear below showing the selected location with a red marker.
