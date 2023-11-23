@@ -102,3 +102,44 @@ else:
     
     # Display the coordinates
     st.write(f"Default Location Coordinates: Latitude {latitude}, Longitude {longitude}")
+# Include the user manual within the app
+st.sidebar.markdown("# User Manual")
+st.sidebar.markdown("""
+**1. Introduction**
+Welcome to the "Apartment Price Prediction In Melbourne" app! This user-friendly tool is designed to predict apartment prices based on user inputs like building area, latitude, and longitude.
+
+**2. Getting Started**
+2.1 **Sidebar Input:**
+   - Use the sliders in the sidebar to set the Building Area, Latitude, and Longitude.
+   - Building Area: Adjust the slider to specify the apartment's size in square meters.
+   - Latitude: Set the latitude coordinate of the location.
+   - Longitude: Set the longitude coordinate of the location.
+
+**3. Making Predictions**
+3.1 **Predict Button:**
+   - Click the "Predict" button to get the predicted apartment price based on your input.
+
+**4. Result Display**
+4.1 **Prediction:**
+   - After clicking "Predict," the app will display the predicted apartment price below the button.
+
+4.2 **Selected Location on Map:**
+   - If the "Predict" button is clicked, a map will appear below showing the selected location with a red marker.
+
+4.3 **Default Map of Melbourne:**
+   - If the "Predict" button is not clicked, a default map of Melbourne will be displayed with a blue marker at the specified default coordinates.
+
+4.4 **Default Location Coordinates:**
+   - Below the default map, you can find the default location coordinates (latitude and longitude).
+
+**5. Additional Information**
+5.1 **About the App:**
+   - The app uses a machine learning model to make predictions based on a Ridge regression algorithm.
+   - Location coordinates are visualized on an interactive map using PyDeck and Mapbox.
+
+5.2 **Note:**
+   - Ensure that you provide valid inputs for building area, latitude, and longitude to get accurate predictions.
+
+**6. Enjoy Using the App!**
+Feel free to explore and have fun predicting apartment prices in Melbourne with our user-friendly app!
+""")
